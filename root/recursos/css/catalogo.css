@@ -1,0 +1,213 @@
+.principal {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.boton-precios-mayoristas {
+    width: 15rem;
+    background: none;
+    border: none;
+    text-align: right;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.contenedor-boton {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 5rem 4rem 0rem 0rem;
+}
+
+.seccion-titulo {
+    display: flex;
+    flex-direction: column;
+}
+
+.seccion-titulo__titulo {
+    text-shadow: var(--titulo-sombra);
+    color: var(--bordo);
+}
+
+.fieldset-filtros__legend {
+    font-size: 2rem;
+}
+
+.fieldset-filtros__label {
+    font-size: 1.2rem;
+}
+
+.contenedor-productos {
+    display: flex;
+    flex-direction: row;
+}
+
+.contenedor-filtros {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 3rem 0 3rem;
+}
+
+.seccion-filtros {
+    background-color: white;
+    width: 100%;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+
+
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.45);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.45);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.45);
+}
+
+.fieldset-filtros {
+    border: 1px solid lightgray;
+    border-radius: 2rem;
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.fieldset-filtros__select {
+    font-size: 1.5rem;
+    border-radius: 2rem;
+    border: 1px solid lightgray;
+    font-family: "Open Sans";
+    padding: 1rem;
+    background-color: rgb(250, 250, 250);
+}
+
+.fieldset-filtros__label {
+    width: 100%;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.seccion-productos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    flex-wrap: wrap;
+}
+
+.tarjeta-producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30rem;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.45);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.45);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.45);
+}
+
+.tarjeta-producto__contenedor-titulo, .tarjeta-producto__contenedor-precio {
+    width: 100%;
+
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.tarjeta-producto__contenedor-titulo {
+    height: 12rem;
+    background-color: white;
+    border-radius: 2rem 2rem 0 0
+}
+
+.tarjeta-producto__titulo {
+    font-size: 3rem;
+    color: var(--bordo);
+    text-shadow: 0px 0px 3px rgba(0,0,0, 38%);
+}
+
+.tarjeta-producto__imagen-contenedor {
+    width: 100%;
+    flex: 0 0 30rem; 
+}
+
+.tarjeta-producto__imagen {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.tarjeta-producto__contenedor-parrafo {
+    height: 20rem;
+    padding: 2rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+.tarjeta-producto__parrafo {
+    font-size: 2rem;
+    text-align: left;
+}
+
+.tarjeta-producto__parrafo {
+    color: black;
+}
+
+.tarjeta-producto__contenedor-precio {
+    height: 7rem;
+    background-color: var(--bordo-oscuro);
+    border-radius: 0 0 2rem 2rem;
+}
+
+.tarjeta-producto__precio {
+    color: white;
+}
+
+.popup {
+    background-color: white;
+    position: relative;
+}
+
+.contenedor-boton-cerrar {
+    display: flex;
+    justify-content: right;
+    padding: 1rem 1rem 0 0;
+}
+
+.popup__seccion-productos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.popup__label {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .fieldset-filtros {
+        flex-direction: row;
+        justify-content: left;
+    }
+
+    .fieldset-filtros__label {
+        width: 30rem;
+    }
+
+    .boton-precios-mayoristas {
+        width: auto;
+    }
+}

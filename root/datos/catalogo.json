@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "nombre": "Vino 1",
+        "precio": 10000,
+        "presentacion": 1,
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim id neque sed euismod. Aenean vestibulum faucibus luctus. Suspendisse potenti.",
+        "imagen": {
+            "src": "./recursos/imagenes/producto 1.jpg",
+            "alt": "Botella de vino tinto individual."
+        }
+    },
+    {
+        "id": 2,
+        "nombre": "Vino 2",
+        "precio": 10000,
+        "presentacion": 1,
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim id neque sed euismod. Aenean vestibulum faucibus luctus. Suspendisse potenti.",
+        "imagen": {
+            "src": "./recursos/imagenes/producto 1.jpg",
+            "alt": "Botella de vino tinto individual."
+        }
+    },
+    {
+        "id": 3,
+        "nombre": "Vino 3",
+        "precio": 10000,
+        "presentacion": 1,
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim id neque sed euismod. Aenean vestibulum faucibus luctus. Suspendisse potenti.",
+        "imagen": {
+            "src": "./recursos/imagenes/producto 1.jpg",
+            "alt": "Botella de vino blanco individual."
+        }
+    },
+    {
+        "id": 4,
+        "nombre": "Vino 4",
+        "precio": 10000,
+        "presentacion": 1,
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim id neque sed euismod. Aenean vestibulum faucibus luctus. Suspendisse potenti.",
+        "imagen": {
+            "src": "./recursos/imagenes/producto 1.jpg",
+            "alt": "Botella de vino blanco individual."
+        }
+    },
+    {
+        "id": 5,
+        "nombre": "Pack de 2",
+        "precio": 18000,
+        "presentacion": 2,
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim id neque sed euismod. Aenean vestibulum faucibus luctus. Suspendisse potenti.",
+        "imagen": {
+            "src": "./recursos/imagenes/producto 3.jpg",
+            "alt": "Pack de 2 botellas de vino."
+        }
+    },
+    {
+        "id": 6,
+        "nombre": "Pack de 4",
+        "precio": 34000,
+        "presentacion": 4,
+        "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim id neque sed euismod. Aenean vestibulum faucibus luctus. Suspendisse potenti.",
+        "imagen": {
+            "src": "./recursos/imagenes/producto 2.jpg",
+            "alt": "Pack de 4 botellas de vino."
+        }
+    }
+]

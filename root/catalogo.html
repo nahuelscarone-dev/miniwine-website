@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./recursos/css/general.css">
+    <link rel="stylesheet" href="./recursos/css/catalogo.css">
+    <script type="module" src="./recursos/js/catalogo.js"></script>
+    <title>Mini Wine - Catálogo</title>
+</head>
+<body class="cuerpo">
+    <header class="cabecera">
+        <a href="./">
+            <img class="cabecera__logotipo" src="./recursos/imagenes/logotipo miniwine.jpeg" alt="Logotipo de Mini Wine."  width="100px">
+        </a>
+
+        <nav class="navegacion">
+            <ul class="navegacion__lista">
+                <li class="navegacion__item"><a href="./index.html">Inicio</a></li>
+                <li class="navegacion__item"><a href="./catalogo.html">Catálogo</a></li>
+                <li class="navegacion__item"><a href="./acerca-de-miniwine.html">Acerca de Mini Wine</a></li>
+                <li class="navegacion__item"><a href="./suma-tu-viñedo.html">Sumá tu viñedo</a></li>
+                <li class="navegacion__item"><a href="./contacto.html">Contacto</a></li>
+            </ul>
+
+            <img class="navegacion__icono" src="./recursos/imagenes/icono menú.svg" alt="Ícono del menú">
+        </nav>
+    </header>
+
+    <main class="principal">
+        <div class="contenedor-boton">
+            <a class="boton-precios-mayoristas" aria-expanded="false" href="./contacto.html">Obtener precios mayoristas</a>
+        </div>
+        <div class="contenedor-filtros">
+            <section class="seccion-filtros">
+                <fieldset class="fieldset-filtros">
+                    <legend class="fieldset-filtros__legend">Filtros</legend>
+
+                    <label class="fieldset-filtros__label" for="id-presentacion">Presentación
+                        <select class="fieldset-filtros__select" name="presentacion" id="id-presentacion">
+                            <option value="0">Todos los productos</option>
+                            <option value="2">Packs de 2</option>
+                            <option value="4">Packs de 4</option>
+                            <option value="1">Individual</option>
+                        </select>
+                    </label>
+                    
+                    <label class="fieldset-filtros__label" for="id-ordenar">Ordenar por...
+                        <select class="fieldset-filtros__select" name="orden" id="id-ordenar">
+                            <option value="nuevo">Lo más nuevo</option>
+                            <option value="menor">Menor precio</option>
+                            <option value="mayor">Mayor precio</option>
+                        </select>
+                    </label>
+                </fieldset>
+            </section>
+        </div>
+
+        <section class="seccion-titulo">
+            <h1 class="seccion-titulo__titulo">Catálogo</h1>
+        </section>
+        
+
+
+        <section class="seccion-productos" id="seccion-productos">
+
+        </section>
+ 
+        <!--
+         <div class="popup">
+
+            <div class="contenedor-boton-cerrar">
+                <button class="popup__boton-cerrar" aria-label="Cerrar ventana modal">X</button> Cerrar popup 
+            </div>
+
+            <form class="popup__formulario" action="mailto:miniwineargentina@gmail.com" method="POST" aria-describedby="ayuda-form">
+
+                Sección de elegir productos
+                <section class="popup__seccion-productos">
+
+                    <label class="popup__label" for="id-producto">Seleccionar producto
+                        <select name="producto" id="id-producto">
+                            <option value="producto1">Producto 1</option>
+                            <option value="producto2">Producto 2</option>
+                            <option value="producto3">Producto 3</option>
+                            <option value="productoN">Producto N</option>
+                        </select>
+                    </label>
+
+                    <label class="popup__label" for="id-cantidad">Cantidad
+                        <input id="id-cantidad" type="number" name="cantidad">
+                    </label>
+
+                    <button>Agregar</button>
+
+                    Lista dinámica, tipo carrito
+                    <ul>
+                        <li>
+                            <span>Nombre del producto X cantidad</span>
+                            <button aria-label="Eliminar producto de la lista">X</button> Eliminar de la lista 
+                        </li>
+                    </ul>
+
+                    <button>Continuar</button>  Continuar a la siguiente sección del form 
+                </section>
+
+                 Sección de datos del cliente y enviar 
+                <section>
+                    <label for="id-nombre">Nombre</label>
+                    <input id="id-nombre" name="nombre" type="text" required>
+
+                    <label for="id-email">Email</label>
+                    <input id="id-email" name="email" type="email" placeholder="ejemplo@email.com" required> 
+
+                    <label for="id-telefono">Teléfono</label>
+                    <input id="id-telefono" name="telefono" type="tel" placeholder="+54 9 11 1234-5678" required>
+
+                    <button type="submit">Enviar</button>
+                </section>
+            </form>
+            <p id="ayuda-form">Completa tus datos y selecciona los productos para conocer precios mayoristas.</p>
+
+        </div>
+        -->
+    </main>
+
+    <footer class="pie">
+
+        <address class="pie__informacion">
+            <a class="pie__link" href="https://www.instagram.com/miniwine_/" target="_blank" rel="noopener noreferrer">
+                <img class="pie__icono" src="./recursos/imagenes/icono instagram.svg" alt="Ícono de Instagram.">
+                @miniwine_
+            </a>
+
+            <a class="pie__link" href="https://wa.me/+5493518519953" target="_blank" rel="noopener noreferrer">
+                <img class="pie__icono" src="./recursos/imagenes/icono whatsapp.svg" alt="Ícono de Whatsapp.">
+                Whatsapp
+            </a>
+        </address>
+    </footer>
+</body>
+</html>

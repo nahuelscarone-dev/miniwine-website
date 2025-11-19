@@ -1,0 +1,98 @@
+/*-------------- PÁGINA ACERCA DE MINI WINE -------------*/
+
+
+.seccion-historia {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 10%;
+    gap: 2rem;
+}
+
+.seccion-historia__titulo, .articulo__titulo {
+    color: var(--bordo);
+    text-shadow: 0px 0px 4px rgba(0,0,0, 38%);
+}
+
+.seccion-mvv {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding: 0 10%;
+}
+
+.articulo__contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+}
+
+.articulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+.articulo__informacion {
+    border-radius: 50%;
+    /* width: 77vw;
+    height: 77vw; */
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.articulo__informacion img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.articulo__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: 1;
+    /* width: 50rem;
+    height: 50rem;
+    border-radius: 100%; */
+}
+
+.articulo__parrafo {
+    color: white;
+    position: absolute;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    z-index: 2;
+    padding: 6rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+    .articulo__informacion {
+        width: 38rem;
+        height: 38rem;
+    }
+    .seccion-mvv {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}

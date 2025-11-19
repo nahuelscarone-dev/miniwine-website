@@ -1,0 +1,12 @@
+#Reservado para futuras reglas
+
+# Para futuros archivos temporales
+*.log
+*.tmp
+
+# Config del editor
+.vscode/
+
+# Config del sistema
+.DS_Store
+Thumbs.db

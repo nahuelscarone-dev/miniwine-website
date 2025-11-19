@@ -1,0 +1,99 @@
+h1 {
+    color: white;
+}
+
+.principal {
+    background-size: cover; 
+    position: relative;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 5%;
+}
+
+.principal--suma-tu-viñedo {
+    background-image: url(../imagenes/viñedo.jpg);
+}
+
+.principal--contacto {
+    background-image: url(../imagenes/contacto.jpg); 
+}
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.78);
+}
+
+.cuerpo .pie {
+    margin-top: 0;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    width: 100%;
+    max-width: 49rem;
+    gap: 2rem;
+    border-radius: 2rem;
+    padding: 3rem;
+    margin: 0 auto;
+}
+
+.formulario__errores {
+    font-size: 1.6rem;
+    text-align: center;    
+}
+
+.formulario__label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 1.6rem;
+    font-weight: bold;
+    gap: 0.5rem;
+    color: white;
+}
+
+.formulario__campo {
+    border-radius: 1.25rem;
+    height: 4rem;
+    border: none;
+    padding: 1rem
+}
+
+.formulario__campo--textarea {
+    height: 15rem;
+    resize: none;
+}
+
+.formulario__boton {
+    width: 100%;
+    height: 5rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    border: none;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    background-color: #006bb3;
+}
+
+.formulario__boton:hover {
+    background-color: #0099ff;
+    cursor: pointer;
+}
+
+.formulario__parrafo {
+    color: white;
+    font-size: 1.6rem;
+    text-align: center;
+}
