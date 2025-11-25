@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./recursos/css/general.css">
     <link rel="stylesheet" href="./recursos/css/acerca-de-miniwine.css">
+    <script src="./recursos/js/menu.js" defer></script>
     <title>Mini Wine - Acerca de</title>
 </head>
 <body>
@@ -13,7 +14,7 @@
             <img class="cabecera__logotipo" src="./recursos/imagenes/logotipo miniwine.jpeg" alt="Logotipo de Mini Wine."  width="100px">
         </a>
 
-        <nav class="navegacion">
+        <nav class="navegacion" id="navegacion">
             <ul class="navegacion__lista">
                 <li class="navegacion__item"><a href="./index.html">Inicio</a></li>
                 <li class="navegacion__item"><a href="./catalogo.html">Catálogo</a></li>
@@ -21,9 +22,14 @@
                 <li class="navegacion__item"><a href="./suma-tu-viñedo.html">Sumá tu viñedo</a></li>
                 <li class="navegacion__item"><a href="./contacto.html">Contacto</a></li>
             </ul>
-
-            <img class="navegacion__icono" src="./recursos/imagenes/icono menú.svg" alt="Ícono del menú">
         </nav>
+
+        <button class="navegacion__boton" id="navegacion__boton">
+            <img class="navegacion__icono" src="./recursos/imagenes/icono menú.svg" alt="Ícono del menú">   
+        </button>
+        
+        <div class="overlay-menu" id="overlay-menu">
+        </div>
     </header>
 
     <main>
