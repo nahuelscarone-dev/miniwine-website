@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./recursos/css/general.css">
     <link rel="stylesheet" href="./recursos/css/suma-tu-viñedo.css">
-    <script type="module" src="./recursos/js/contacto.js"></script>
     <script src="./recursos/js/menu.js" defer></script>
     <title>Mini Wine - Contacto</title>
 </head>
@@ -26,7 +25,7 @@
         </nav>
 
         <button class="navegacion__boton" id="navegacion__boton">
-            <img class="navegacion__icono" id="navegacion__icono" src="./recursos/imagenes/icono-menu.svg" alt="Ícono del menú">   
+            <img class="navegacion__icono" id="navegacion__icono" src="./recursos/imagenes/icono menú.svg" alt="Ícono del menú">   
         </button>
         
         <div class="overlay-menu" id="overlay-menu">
@@ -35,9 +34,10 @@
 
     <main class="principal principal--contacto">
         <h1>Contacto</h1>
-        <form class="formulario" id="formulario" action="mailto:miniwineargentina@gmail.com" method="post">
+        <p class="formulario__parrafo">¿Quieres obtener más información? Completa el formulario con tus datos y tu mensaje será enviado por Whatsapp.</p>
+        <form class="formulario" id="formulario-contacto">
 
-            <div class="formulario__errores" id="formulario__errores"></div>
+            <p class="formulario__errores" id="formulario__errores"></p>
             
             <label class="formulario__label" for="id-nombre">Nombre
                 <input class="formulario__campo" id="id-nombre" name="nombre" type="text" required>
@@ -56,9 +56,7 @@
             </label>
 
             <button class="formulario__boton" type="submit">Enviar</button>
-        </form> 
-
-        <p class="formulario__parrafo">Completa tus datos y tu mensaje será enviado por correo electrónico.</p>
+        </form>
 
         <div class="overlay"></div>
     
@@ -78,5 +76,7 @@
             </a>
         </address>
     </footer>
+
+    <script type="module" src="./recursos/js/contacto.js"></script>    
 </body>
 </html>

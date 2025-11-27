@@ -64,25 +64,41 @@ function validarCampos(nombre, email, telefono, comentario) {
     return errores
 }
 
-function crearMensaje() {
-    // evento.preventDefault()
+function mostrarMensajeError(contenedorErrores, nombre, email, telefono, comentario) {
 
-    const $contenedor = document.getElementById("formulario__errores")
-    const $nombre = document.getElementById("id-nombre").value.trim()
-    const $email = document.getElementById("id-email").value.trim()
-    const $telefono = document.getElementById("id-telefono").value.trim()
-    const $comentario = document.getElementById("id-comentario").value.trim()
+    // const $nombre = document.getElementById(nombre).value.trim()
+    // const $email = document.getElementById(email).value.trim()
+    // const $telefono = document.getElementById(telefono).value.trim()
+    // const $comentario = document.getElementById(comentario).value.trim()
 
-    const errores = validarCampos($nombre, $email, $telefono, $comentario)
+    const errores = validarCampos(nombre, email, telefono, comentario)
 
     if(errores.length === 0) {
-        $contenedor.innerHTML = ""
+        contenedorErrores.style.display = "none"
+        contenedorErrores.innerHTML = ""
     } else {
-        $contenedor.innerHTML = errores[0]
-        $contenedor.style.color = "#ff4545";
+        contenedorErrores.style.display = "block"
+        contenedorErrores.innerHTML = errores[0]
+        contenedorErrores.style.color = "#ff4545";
     }
 
     return errores.length
 }
 
-export {crearMensaje}
+function crearMensajeWhatsapp(mensaje, numeroWhatsApp) {
+
+    // 3. Construye el mensaje con los datos (usando \n para saltos de línea)
+    // Se usa encodeURIComponent para manejar espacios y caracteres especiales de la URL.
+    const mensajeCodificado = encodeURIComponent(mensaje);
+
+    // 4. Crea la URL completa de WhatsApp
+    const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensajeCodificado}`;
+
+    // 5. Redirige al usuario a la URL de WhatsApp
+    // Usa window.location.href para la misma pestaña, o window.open(urlWhatsApp, '_blank') para una nueva pestaña.
+    window.open(urlWhatsApp, '_blank');
+    
+}
+
+
+export {mostrarMensajeError, crearMensajeWhatsapp}

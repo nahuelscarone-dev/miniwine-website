@@ -14,7 +14,7 @@ $boton.addEventListener("click", () => {
     if($navegacion.classList.contains("navegacion--abierta")) {
         $imagenBoton.src = "./recursos/imagenes/icono-cerrar-menu.svg"
     } else {
-        $imagenBoton.src = "./recursos/imagenes/icono-menu.svg"
+        $imagenBoton.src = "./recursos/imagenes/icono menú.svg"
     }
 })
 
@@ -24,7 +24,7 @@ function chequearAncho(e) {
         $menu.classList.remove("navegacion--abierta");
         $overlay.classList.remove("overlay-menu--abierto")
         document.body.classList.remove("no-scroll"); // si bloqueás scroll
-        $imagenBoton.src = "./recursos/imagenes/icono-menu.svg"
+        $imagenBoton.src = "./recursos/imagenes/icono menú.svg"
     }
 }
 

@@ -21,6 +21,7 @@
     --subtitulo: 3.5rem;
     --link: 2.3rem;
     --titulo-sombra: 0px 0px 4px rgba(0,0,0, 38%);
+    --input: 1.6rem;
     
     --ajusteViewport: calc(100dvh - 11rem);
 
@@ -51,9 +52,17 @@ h3, h4 {
     font-size: var(--subtitulo);
 }
 
-p {
+p, label {
     font-size: var(--parrafo);
     text-align: justify;
+}
+
+input, textarea {
+    font-size: var(--input);
+}
+
+button {
+    font-size: var(--parrafo);
 }
 
 body, h1, h2, p{
@@ -82,6 +91,12 @@ button {
     font-family: "Open Sans", sans-serif;
 }
 
+header > a {
+    display: flex;
+    align-items: center;
+    padding: 2.5rem;
+}
+
 .cabecera {
     display: flex;
     justify-content: space-between;
@@ -104,24 +119,8 @@ button {
     width: auto;
 }
 
-header > a {
-    display: flex;
-    align-items: center;
-    padding: 2rem;
-}
-
 .navegacion {
     display: none;
-
-    /* position: absolute;
-    top: 0;
-    right: 0;
-    background-color: white;
-    height: 100vh;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; */
-
 }
 
 .navegacion__boton {
@@ -255,15 +254,18 @@ header > a {
 @media (min-width: 768px) {
     :root {
         --parrafo: 2.5rem; /* Output para 2rem min y 3.5rem max */
+        --input: 1.8rem;
         --titulo: 5rem; /*  */
         --subtitulo: 4rem;
     }
-
-
 }
 
 /* Escritorio */
 @media (min-width: 1024px) {
+
+    :root {
+        --link: 2rem;
+    }
 
     .navegacion__boton {
         display: none;
