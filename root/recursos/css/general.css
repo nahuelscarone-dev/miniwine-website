@@ -1,5 +1,4 @@
 
-
 /*-------------------------------- GENERAL --------------------------------*/
 
 @font-face {
@@ -20,7 +19,7 @@
     --parrafo: 2rem;
     --titulo: 4.5rem;
     --subtitulo: 3.5rem;
-    --link: 1.8rem;
+    --link: 2.3rem;
     --titulo-sombra: 0px 0px 4px rgba(0,0,0, 38%);
     
     --ajusteViewport: calc(100dvh - 11rem);
@@ -105,6 +104,12 @@ button {
     width: auto;
 }
 
+header > a {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+}
+
 .navegacion {
     display: none;
 
@@ -167,7 +172,7 @@ button {
     top: 0;
     right: 0;
     height: 100vh;
-    width: 27rem;
+    width: 30rem;
     display: flex; 
     flex-direction: column;
     background-color: white;
@@ -196,7 +201,7 @@ button {
 .pie__informacion {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 3rem;
 }
 
 .pie__link {
@@ -254,6 +259,16 @@ button {
         --subtitulo: 4rem;
     }
 
+
+}
+
+/* Escritorio */
+@media (min-width: 1024px) {
+
+    .navegacion__boton {
+        display: none;
+    } 
+
     .pie__informacion {
         flex-direction: row;
         gap: 3.3rem;
@@ -263,10 +278,6 @@ button {
         display: flex;
         height: 100%;
         padding-right: 5rem;
-    }
-
-    .navegacion__boton {
-        display: none;
     }
 
     .navegacion__lista {
@@ -279,12 +290,5 @@ button {
 
     .overlay-menu {
         display: none;
-    }
-}
-
-/* Escritorio */
-@media (min-width: 1024px) {
-    :root {
-        --link: 2rem;
     }
 }

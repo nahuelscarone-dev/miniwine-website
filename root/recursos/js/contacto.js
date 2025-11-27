@@ -1,35 +1,45 @@
-import { validarCampos } from "./validacion.js";
+import { crearMensaje } from "./validacion.js";
 
 const $formulario = document.getElementById("formulario")
-
-const $contenedor = document.getElementById("formulario__errores")
+const numeroWhatsApp = '5493517019291'; 
 
 $formulario.addEventListener("submit", (evento) => {
+
+    const resultadoErrores = crearMensaje()
+
     evento.preventDefault()
 
-    const $nombre = document.getElementById("id-nombre").value.trim()
-    const $email = document.getElementById("id-email").value.trim()
-    const $telefono = document.getElementById("id-telefono").value.trim()
-    const $comentario = document.getElementById("id-comentario").value.trim()
-
-    const errores = validarCampos($nombre, $email, $telefono, $comentario)
-
-    if(errores.length === 0) {
-        $contenedor.innerHTML = ""
-        $formulario.submit()
-        $contenedor.innerHTML = "El formulario fue enviado exitosamente"
-        $contenedor.style.color = "#7aff73"
-        document.getElementById("id-nombre").value = ""
-        document.getElementById("id-email").value = ""
-        document.getElementById("id-telefono").value = ""
-        document.getElementById("id-comentario").value = ""
+    if(resultadoErrores > 0) {
+        return
+            
     } else {
-        // errores.forEach(element => {
-        //     $contenedor.innerHTML = errores.join("<br>")
-        // });
-        $contenedor.innerHTML = errores[0]
-        $contenedor.style.color = "#ff4545";
-        
-        // .join("<br>")
+        // 2. Recupera los valores de los campos
+        const nombre = document.getElementById('id-nombre').value;
+        const email = document.getElementById('id-email').value;
+        const telefono = document.getElementById('id-telefono').value;
+        const comentario = document.getElementById('id-comentario').value;
+
+        // 3. Construye el mensaje con los datos (usando \n para saltos de línea)
+        // Se usa encodeURIComponent para manejar espacios y caracteres especiales de la URL.
+        const mensajeBase = `¡Hola! Quiero sumar mi viñedo a Mini Wine Argentina.
+
+*•Nombre del viñedo*: ${nombre}
+
+*•Email*: ${email}
+
+*•Teléfono*: ${telefono}
+
+*•Comentario*: 
+${comentario}
+`;
+        const mensajeCodificado = encodeURIComponent(mensajeBase);
+
+        // 4. Crea la URL completa de WhatsApp
+        const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensajeCodificado}`;
+
+        // 5. Redirige al usuario a la URL de WhatsApp
+        // Usa window.location.href para la misma pestaña, o window.open(urlWhatsApp, '_blank') para una nueva pestaña.
+        window.open(urlWhatsApp, '_blank');
     }
+
 })

@@ -64,4 +64,25 @@ function validarCampos(nombre, email, telefono, comentario) {
     return errores
 }
 
-export {validarCampos}
+function crearMensaje() {
+    // evento.preventDefault()
+
+    const $contenedor = document.getElementById("formulario__errores")
+    const $nombre = document.getElementById("id-nombre").value.trim()
+    const $email = document.getElementById("id-email").value.trim()
+    const $telefono = document.getElementById("id-telefono").value.trim()
+    const $comentario = document.getElementById("id-comentario").value.trim()
+
+    const errores = validarCampos($nombre, $email, $telefono, $comentario)
+
+    if(errores.length === 0) {
+        $contenedor.innerHTML = ""
+    } else {
+        $contenedor.innerHTML = errores[0]
+        $contenedor.style.color = "#ff4545";
+    }
+
+    return errores.length
+}
+
+export {crearMensaje}
